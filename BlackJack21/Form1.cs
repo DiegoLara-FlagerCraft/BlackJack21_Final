@@ -27,5 +27,17 @@ namespace BlackJack21
                 RtxtMostrar.Text += c.Symbol + c.Suit + "- score: " + c.Score + " color: " + c.Color + "\n";
             }
         }
+
+        private void BtnManoD_Click(object sender, EventArgs e)
+        {
+            Dealer f = new Dealer();
+            f.Deal();
+
+            foreach(Card c in f.GetHand())
+            {
+                RtxtManoD.Text = c.Symbol + c.Suit + "- score: " + c.Score + " color: " + c.Color + "\n";
+            }
+   
+        }
     }
 }

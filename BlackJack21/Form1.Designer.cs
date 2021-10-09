@@ -29,13 +29,34 @@ namespace BlackJack21
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            this.RtxtManoD = new System.Windows.Forms.RichTextBox();
+            this.BtnManoD = new System.Windows.Forms.Button();
             this.BtnvCarta = new System.Windows.Forms.Button();
             this.RtxtMostrar = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
+            // RtxtManoD
+            // 
+            this.RtxtManoD.Location = new System.Drawing.Point(545, 61);
+            this.RtxtManoD.Name = "RtxtManoD";
+            this.RtxtManoD.Size = new System.Drawing.Size(237, 196);
+            this.RtxtManoD.TabIndex = 2;
+            this.RtxtManoD.Text = "";
+            // 
+            // BtnManoD
+            // 
+            this.BtnManoD.Location = new System.Drawing.Point(589, 291);
+            this.BtnManoD.Name = "BtnManoD";
+            this.BtnManoD.Size = new System.Drawing.Size(131, 57);
+            this.BtnManoD.TabIndex = 3;
+            this.BtnManoD.Text = "Mano Dealer";
+            this.BtnManoD.UseVisualStyleBackColor = true;
+            this.BtnManoD.Click += new System.EventHandler(this.BtnManoD_Click);
+            // 
             // BtnvCarta
             // 
-            this.BtnvCarta.Location = new System.Drawing.Point(319, 318);
+            this.BtnvCarta.Location = new System.Drawing.Point(84, 291);
             this.BtnvCarta.Name = "BtnvCarta";
             this.BtnvCarta.Size = new System.Drawing.Size(131, 57);
             this.BtnvCarta.TabIndex = 0;
@@ -45,7 +66,7 @@ namespace BlackJack21
             // 
             // RtxtMostrar
             // 
-            this.RtxtMostrar.Location = new System.Drawing.Point(268, 12);
+            this.RtxtMostrar.Location = new System.Drawing.Point(44, 89);
             this.RtxtMostrar.Name = "RtxtMostrar";
             this.RtxtMostrar.Size = new System.Drawing.Size(237, 196);
             this.RtxtMostrar.TabIndex = 1;
@@ -55,7 +76,10 @@ namespace BlackJack21
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(1019, 607);
+            this.Controls.Add(this.BtnManoD);
+            this.Controls.Add(this.RtxtManoD);
             this.Controls.Add(this.RtxtMostrar);
             this.Controls.Add(this.BtnvCarta);
             this.Name = "Form1";
@@ -65,7 +89,8 @@ namespace BlackJack21
         }
 
         #endregion
-
+        private System.Windows.Forms.RichTextBox RtxtManoD;
+        private System.Windows.Forms.Button BtnManoD;
         private System.Windows.Forms.Button BtnvCarta;
         private System.Windows.Forms.RichTextBox RtxtMostrar;
     }

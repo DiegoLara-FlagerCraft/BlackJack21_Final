@@ -27,7 +27,6 @@ namespace BlackJack21
             }
 
             Randomize();
-        
         }
 
         public List<Card> GetDeck()
@@ -48,6 +47,11 @@ namespace BlackJack21
             hand.Add(c);
             return c;
         }
+        public List<Card> GetHand()
+        {
+            return hand;
+        }
+
     }
 }
  
