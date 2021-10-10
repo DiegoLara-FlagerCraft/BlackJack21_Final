@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace BlackJack21
 {
-    class Dealer
+    public class Dealer : Members
     {
         private List<Card> deck;
-        private List<Card> hand;
 
         public void Generate()
         {
@@ -42,16 +41,16 @@ namespace BlackJack21
 
         public Card Deal()
         {
-            Card c = deck.Last();
-            this.deck.RemoveAt(this.deck.Count - 1);
-            hand.Add(c);
+            Card c = this.deck.Last();
+            this.deck.RemoveAt(this.deck.Count() - 1);
             return c;
         }
-        public List<Card> GetHand()
-        {
-            return hand;
-        }
 
+        public void Init()
+        {
+            AddCard(Deal());
+            AddCard(Deal());
+        }
     }
 }
  

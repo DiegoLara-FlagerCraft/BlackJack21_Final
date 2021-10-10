@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BlackJack21
 {
-    class Card
+    public class Card
     {
         public string suit;
         public string symbol;
